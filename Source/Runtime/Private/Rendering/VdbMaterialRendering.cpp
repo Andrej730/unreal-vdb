@@ -345,7 +345,7 @@ void FVdbMaterialRendering::InitDelegate()
 		if (RendererModule)
 		{
 			RenderDelegate.BindRaw(this, &FVdbMaterialRendering::Render_RenderThread);
-			RenderDelegateHandle = RendererModule->RegisterPostOpaqueRenderDelegate(RenderDelegate);
+			RenderDelegateHandle = RendererModule->RegisterOverlayRenderDelegate(RenderDelegate);
 		}
 	}
 }
